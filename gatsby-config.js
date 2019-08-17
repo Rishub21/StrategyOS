@@ -9,7 +9,7 @@ module.exports = {
   },
 
   mapping: {
-    'MarkdownRemark.frontmatter.author': 'AuthorYamdl',
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
     'gatsby-plugin-sitemap',
