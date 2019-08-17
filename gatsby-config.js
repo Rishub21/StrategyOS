@@ -7,8 +7,9 @@ module.exports = {
     description: 'The professional publishing platform',
     siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
   },
+
   mapping: {
-    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
+    'MarkdownRemark.frontmatter.author': 'AuthorYamdl',
   },
   plugins: [
     'gatsby-plugin-sitemap',

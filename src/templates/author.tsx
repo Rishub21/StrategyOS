@@ -26,6 +26,8 @@ import Helmet from 'react-helmet';
 import config from '../website-config';
 import Website from '../components/icons/website';
 import Twitter from '../components/icons/twitter';
+import Linkedin from '../components/icons/linkedin';
+
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -96,6 +98,7 @@ interface AuthorTemplateProps {
       twitter?: string;
       facebook?: string;
       location?: string;
+      linkedin?: string;
       // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
         childImageSharp: {
@@ -223,6 +226,21 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
                     <Facebook />
                   </a>
                 )}
+
+                {author.linkedin && (
+                  <a
+                    className="social-link-linkedin"
+                    css={SocialLink}
+                    href={`${author.linkedin}`}
+                    title="Linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin />
+                  </a>
+                )}
+
+
               </AuthorMeta>
             </SiteHeaderContent>
           </div>
@@ -252,6 +270,7 @@ export const pageQuery = graphql`
       twitter
       bio
       facebook
+      linkedin
       location
       profile_image {
         childImageSharp {
