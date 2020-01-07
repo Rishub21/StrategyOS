@@ -105,11 +105,12 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
     return "asdf".
   }));
   */
-  const max = props.data.headerImages.edges.length ;
+
+  const max = props.data.headerImages.edges.length ;  // this comes from how many files are in titleImages folder
   const rand = Math.floor(Math.random()*max )
 
-  console.log("Random " + rand);
-
+  console.log("Random " + rand + " " + max);
+  console.log()
   const width = props.data.header.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
   const height = String(Number(width) / props.data.header.childImageSharp.fluid.aspectRatio);
   return (
@@ -136,7 +137,6 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
         <header
           css={[outer, SiteHeader]}
           style={{
-
             backgroundImage: `url('${props.data.headerImages.edges[rand].node.childImageSharp.fluid.src}')`, // image background
           }}
         >
@@ -152,8 +152,11 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
                 ) : (
                   config.title
                 )}
+                <br />
+
+                Winner Takes All
               </SiteTitle>
-              <SiteDescription>Your Guide to Tech Strategy</SiteDescription>
+              <SiteDescription> A site for tech strategy and product</SiteDescription>
             </SiteHeaderContent>
             <SiteNav isHome />
           </div>

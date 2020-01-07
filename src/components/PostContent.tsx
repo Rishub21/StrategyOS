@@ -8,11 +8,11 @@ import { colors } from '../styles/colors';
 export const PostFullContent = styled.section`
   position: relative;
   margin: 0 auto;
-  padding: 70px 100px 0;
+  padding: 70px 130px 0;
   min-height: 230px;
   font-family: Georgia, serif;
   font-size: 2.2rem;
-  line-height: 1.6em;
+  line-height: 1.8em;
   background: #fff;
 
   @media (max-width: 1170px) {

@@ -315,7 +315,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
               {/* The big email subscribe modal content */}
               {config.showSubscribe && <Subscribe title={config.title} />}
 
-          
+
             </article>
           </div>
         </main>
